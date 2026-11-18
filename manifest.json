@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Re:ANIME Random",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Adds a Random button to Re:ANIME that opens a playable random title — TV, movies, OVA, ONA or specials.",
   "permissions": ["storage"],
   "host_permissions": ["https://reanime.cz/*"],

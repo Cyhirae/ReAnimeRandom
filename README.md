@@ -49,7 +49,7 @@ After updating files, hit the ↻ reload icon on the extension card in `chrome:/
 | Open the anime page | **Details** |
 | See previous picks | The clock button beside Random, or `Alt+H` |
 | Watch something from history | Click a row to expand it, then **Watch now** |
-| Close a panel | `Esc`, the ✕, or clicking the dimmed backdrop |
+| Close a panel | `Esc`, the ✕, clicking the dimmed backdrop, or choosing **Watch now** / **Details** (they close it as they navigate away) |
 
 The header button collapses to just the dice icon in narrow windows, so it never crowds out **Sign In**.
 

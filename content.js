@@ -649,7 +649,14 @@
     if (overlay) overlay.remove();
     overlay = document.createElement('div');
     overlay.className = 'stage';
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeOverlay(); });
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) { closeOverlay(); return; }
+      // Watch now / Details lead away from the page — close the panel first
+      const link = e.target instanceof Element ? e.target.closest('a[href]') : null;
+      if (!link) return;
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      closeOverlay();
+    });
     root.appendChild(overlay);
     document.documentElement.style.overflow = 'hidden';
     return overlay;
