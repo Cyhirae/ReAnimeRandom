@@ -1,0 +1,11 @@
+# build output
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/

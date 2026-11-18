@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Re:ANIME Random",
+  "version": "1.4.6",
+  "description": "Adds a Random button to Re:ANIME that opens a playable random title — TV, movies, OVA, ONA or specials.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://reanime.cz/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://reanime.cz/*"],
+      "js": ["content.js"],
+      "css": ["button.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Re:ANIME Random",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

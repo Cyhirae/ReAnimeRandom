@@ -1,0 +1,51 @@
+/* Header button — styled to match the site's HUD chrome (clipped corners, 11px/800 uppercase). */
+.ra-random-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 33px;
+  padding: 0 11px;
+  margin-inline-end: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f0f0f0;
+  font-family: "Inter Variable", Inter, system-ui, sans-serif;
+  font-size: 11.2px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1.008px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+  transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+.ra-random-btn:hover,
+.ra-random-btn:focus-visible {
+  color: #c8ff3d;
+  border-color: oklch(76.8% .233 130.85 / .65);
+  background: oklch(76.8% .233 130.85 / .10);
+  outline: none;
+}
+.ra-random-btn:active { background: oklch(76.8% .233 130.85 / .18); }
+.ra-random-btn[data-busy="1"] { opacity: .6; pointer-events: none; }
+.ra-random-btn svg {
+  width: 14px; height: 14px; flex: none;
+  color: oklch(76.8% .233 130.85);
+  transition: color .18s ease;
+}
+.ra-random-btn:hover svg { color: #c8ff3d; }
+.ra-random-btn[data-busy="1"] svg { animation: ra-spin .9s linear infinite; }
+@keyframes ra-spin { to { transform: rotate(360deg); } }
+
+/* Narrow windows: drop the label rather than squeezing the header. */
+@media (max-width: 1180px) {
+  .ra-random-btn { padding: 0 9px; }
+  .ra-random-btn .ra-lbl { display: none; }
+}
+
+/* History button: icon-only, a size down from the Random button. */
+.ra-history-btn { padding: 0 8px; margin-inline-end: 4px; }
+.ra-history-btn svg { width: 15px; height: 15px; }
+.ra-history-btn:hover svg { color: #c8ff3d; }
